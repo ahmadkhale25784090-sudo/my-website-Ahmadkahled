@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية المبرمج الصغير</title>
+    
+    <style>
+        /* ===== الإعدادات العامة ===== */
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f0f4f8;
+            color: #333; line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ===== الترويسة (ثابتة لا تتبع التمرير) ===== */
+        header {
+            background: #6c5ce7;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .logo { font-size: 1.3rem; font-weight: bold; }
+        
+        nav ul {
+            list-style: none; display: flex; gap: 20px;
+            margin: 0; padding: 0; align-items: center;
+        }
+        
+        nav a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+
+        .translate-btn {
+            background: #0984e3; color: white; border: none; padding: 8px 15px;
+            border-radius: 20px; cursor: pointer; display: flex;
+            align-items: center; gap: 8px; font-weight: bold; font-size: 0.9rem;
+        }
+
+        /* ===== المحتوى ===== */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto 50px;
+            padding: 0 15px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .info-card h2 {
+            color: #6c5ce7;
+            border-right: 5px solid #fdcb6e;
+            padding-right: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق أرقام التواصل */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #eef2f7;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover { transform: scale(1.02); background: #fff; border-color: #6c5ce7; }
+
+        .contact-name { font-weight: bold; color: #2d3436; font-size: 1.1rem; }
+        
+        .contact-phone { 
+            color: #0984e3; 
+            text-decoration: none; 
+            font-weight: bold; 
+            direction: ltr; /* لضمان ظهور الأرقام بشكل صحيح */
+        }
+
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* تنسيق الجوال */
+        @media (max-width: 600px) {
+            header { padding: 1rem; }
+            .logo { font-size: 1.1rem; }
+            .contact-item { flex-direction: column; text-align: center; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" id="siteLogo">أكاديمية المبرمج</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="navHome">الرئيسية</a></li>
+                <li>
+                    <button id="languageSwitcher" class="translate-btn">
+                        <span id="langFlag">🇺🇸</span>
+                        <span id="langText">English</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 id="heroTitle">مرحباً بك في أكاديميتنا 🚀</h1>
+        <p id="heroDesc">نتعرف عليك وتواصل معنا بكل سهولة.</p>
+    </section>
+
+    <div class="container">
+        <section class="info-card">
+            <h2 id="aboutTitle">🚀 من نحن؟</h2>
+            <p id="aboutContent">أكاديمية المبرمج الصغير هي منصة تعليمية متخصصة للأطفال، نهدف إلى تبسيط مفاهيم البرمجة وتحويلها إلى ألعاب ممتعة.</p>
+        </section>
+
+        <section class="info-card">
+            <h2 id="contactTitle">📞 أرقام التواصل</h2>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <span class="contact-name">احمد ابوالنوه</span>
+                    <a href="tel:0907896025" class="contact-phone">097896025</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-name">محمد تاج السر</span>
+                    <a href="tel:0121401692" class="contact-phone">0121401692</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-name">عبدالماجد ادريس</span>
+                    <a href="tel:0991472164" class="contact-phone">0991472164</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p id="footerText">© 2026 أكاديمية المبرمج الصغير</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                logo: "أكاديمية المبرمج", home: "الرئيسية",
+                heroT: "مرحباً بك في أكاديميتنا 🚀", heroD: "نتعرف عليك وتتواصل معنا بكل سهولة.",
+                aboutT: "🚀 من نحن؟", aboutC: "أكاديمية المبرمج الصغير هي منصة تعليمية متخصصة للأطفال، نهدف إلى تبسيط مفاهيم البرمجة وتحويلها إلى ألعاب ممتعة.",
+                contactT: "📞 أرقام التواصل",
+                footer: "© 2026 أكاديمية المبرمج الصغير", langBtn: "English", flag: "🇺🇸"
+            },
+            en: {
+                logo: "Coder Academy", home: "Home",
+                heroT: "Welcome to Our Academy 🚀", heroD: "Get to know us and contact us easily.",
+                aboutT: "🚀 Who Are We?", aboutC: "Little Programmer Academy is a specialized platform for kids, aiming to simplify coding through fun games.",
+                contactT: "📞 Contact Numbers",
+                footer: "© 2026 Little Programmer Academy", langBtn: "العربية", flag: "🇸🇦"
+            }
+        };
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+
+            document.getElementById('siteLogo').textContent = t.logo;
+            document.getElementById('navHome').textContent = t.home;
+            document.getElementById('heroTitle').textContent = t.heroT;
+            document.getElementById('heroDesc').textContent = t.heroD;
+            document.getElementById('aboutTitle').textContent = t.aboutT;
+            document.getElementById('aboutContent').textContent = t.aboutC;
+            document.getElementById('contactTitle').textContent = t.contactT;
+            document.getElementById('footerText').textContent = t.footer;
+            document.getElementById('langText').textContent = t.langBtn;
+            document.getElementById('langFlag').textContent = t.flag;
+
+            localStorage.setItem('siteLang', lang);
+        }
+
+        document.getElementById('languageSwitcher').onclick = () => {
+            const newLang = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLang') || 'ar';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
